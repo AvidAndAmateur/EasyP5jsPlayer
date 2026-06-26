@@ -1,48 +1,106 @@
-EasyP5jsPlayer is a simple p5js library aimed at getting users started quickly with making a player object for their game
+# EasyP5jsPlayer
 
-installation:
-In your projects index.html file, paste this in
+EasyP5jsPlayer is a simple p5.js library aimed at getting users started quickly with making a player object for their game.
+
+---
+
+## Installation
+
+In your project's `index.html` file, paste this:
+
+```html
 <script src="https://cdn.jsdelivr.net/gh/AvidAndAmateur/EasyP5jsPlayer@main/player.js"></script>
-this ensures the library is loaded and findable
+```
 
-usage:
-once the player object is made for example lets say you have made a variable named player, you would create the object using
+This ensures the library is loaded and findable.
+
+---
+
+## Usage
+
+Once the player object is made (for example a variable named `player`), create it using:
+
+```javascript
 player = makePlayer();
+```
 
-to set the player health you would then do, where x is the desired amount
-player.setHealth(x)
+---
 
-To set the player image you would do , where img is your image variable containing your loadimage
+### Set player health
+
+```javascript
+player.setHealth(x);
+```
+
+Where `x` is the desired amount.
+
+---
+
+### Set player image
+
+```javascript
 player.setImage(img);
+```
 
-To show the player on the screen you would do, where x is the desired width of the image and y is the desired height
-player.show(x,y);
+Where `img` is your `loadImage()` variable.
 
-To make the player move ensure the that player.movement is in draw function like so:
-function draw(){
-  //your code
+---
+
+### Show player
+
+```javascript
+player.show(x, y);
+```
+
+Where:
+- `x` = width
+- `y` = height
+
+---
+
+### Movement
+
+Make sure this is inside `draw()`:
+
+```javascript
+function draw() {
   player.movement();
 }
+```
 
-To use the border return (seen in some 2d indie games where the player returns to the screen in the opposite direction they went in)
-use the following:
-function draw(){
-  //your code
+---
+
+### Screen wrap (checkmap)
+
+```javascript
+function draw() {
   player.checkmap();
 }
-example style.js:
+```
+
+This makes the player reappear on the opposite side of the screen.
+
+---
+
+## Example
+
+```javascript
 let imgy;
-function preload(){
-  imgy = loadImage("imagelink/file");
+
+function preload() {
+  imgy = loadImage("imageLink.png");
 }
+
 function setup() {
-    createCanvas(400, 400);
-    p = makePlayer();
+  createCanvas(400, 400);
+  p = makePlayer();
+  p.setImage(imgy);
 }
 
 function draw() {
-    background(220);
-    p.setImage(imgy)
-    p.movement();
-    p.show(50,50);
+  background(220);
+  p.movement();
+  p.checkmap();
+  p.show(50, 50);
 }
+```
