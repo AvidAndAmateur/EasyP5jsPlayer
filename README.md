@@ -18,7 +18,7 @@ This ensures the library is loaded and findable.
 
 ## Usage
 
-Once the player object is made (for example a variable named `player`), create it using:
+Once the player variable is made (for example a variable named `player`), create it using:
 
 ```javascript
 player = makePlayer();
