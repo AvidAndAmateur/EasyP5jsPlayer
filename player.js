@@ -20,9 +20,9 @@ class Player {
         if (keyIsDown(83)) this.pos.y += 10; 
     }
 
-    show() {
+    show(sizex,sizey) {
         if (this.image) {
-            image(this.image, this.pos.x, this.pos.y);
+            image(this.image, this.pos.x, this.pos.y,sizex,sizey);
         }
     }
 }
