@@ -1,11 +1,11 @@
-# EasyP5jsPlayer
+# EasyP5js
 
-EasyP5jsPlayer is a simple p5.js library aimed at getting users started quickly with making a player object for their game.
+EasyP5js is a simple p5.js library aimed at getting users started quickly with making a 2d web games.
 
 ---
 
 ## Installation
-
+For the player module do the following:
 In your project's `index.html` file, paste this:
 
 ```html
@@ -16,7 +16,7 @@ This ensures the library is loaded and findable.
 
 ---
 
-## Usage
+## Usage of EasyP5js player
 
 Once a variable for the player is made you must assign the player object to it, you can do this by using:
 
