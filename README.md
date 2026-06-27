@@ -5,14 +5,18 @@ EasyP5js is a simple p5.js library aimed at getting users started quickly with m
 ---
 
 ## Installation
-For the player module do the following:
+For the player module do the following,
 In your project's `index.html` file, paste this:
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/AvidAndAmateur/EasyP5js@main/player.js"></script>
 ```
-
-This ensures the library is loaded and findable.
+For the enemy module do the following,
+In your project's `index.html` file, paste this:
+```html
+<script src="https://cdn.jsdelivr.net/gh/AvidAndAmateur/EasyP5js@main/enemy.js"></script>
+```
+This ensures the librarys are loaded and findable.
 
 ---
 
@@ -104,3 +108,15 @@ function draw() {
   p.show(50, 50);
 }
 ```
+##Usage of EasyP5js enemy
+Once a variable for the player is made you must assign the enemy object to it, you can do this by using:
+```javascript
+enemy = makeEnemy(A,B,C,X,Y)
+```
+Where:
+A = Desired health
+B = Desired level
+C = Desired damage (when attacking player)
+X = Desired X position (leave blank for random)
+Y = Desired Y position (leave blank for random)
+As of 27/06/26 (DD/MM/YY) certain variables do not have a custom set function like player does for health
