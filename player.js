@@ -5,8 +5,12 @@ class Player {
         this.image = null;
         this.pos = createVector(0, 0);
         this.attacking = null;
+        this.speed = 10;
         this.vel;
         this.gravity;
+    }
+    setSpeed(speed){
+        this.speed = speed
     }
 
     setHealth(h) {
@@ -18,10 +22,10 @@ class Player {
     }
 
     movement() { //basic vector based movement system using wasd
-        if (keyIsDown(65)) this.pos.x -= 10; 
-        if (keyIsDown(68)) this.pos.x += 10; 
-        if (keyIsDown(87)) this.pos.y -= 10; 
-        if (keyIsDown(83)) this.pos.y += 10; 
+        if (keyIsDown(65)) this.pos.x -= this.speed; 
+        if (keyIsDown(68)) this.pos.x += this.speed; 
+        if (keyIsDown(87)) this.pos.y -= this.speed; 
+        if (keyIsDown(83)) this.pos.y += this.speed; 
     }
     checkmap(){ //creates a border system where if the player goes off map they return from opposite direction
     if(this.pos.y>height+5){
@@ -43,7 +47,7 @@ class Player {
             image(this.image, this.pos.x, this.pos.y,sizex,sizey);
         }
         else{
-            show_default()
+            this.show_default()
         }
     }
     show_default(){ //if player has no image they should use this to show basic obj
@@ -51,7 +55,7 @@ class Player {
     }
     attack(){
         this.attacking=true
-        setTimeout(()=>this.attack=false,1500)
+        setTimeout(()=>this.attacking=false,1500)
     }
 
 }

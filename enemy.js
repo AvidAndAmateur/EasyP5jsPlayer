@@ -1,5 +1,5 @@
 let enemies = []
-class enemy{
+class Enemy{
     constructor(health=0,level=0,damage=0,posx=0,posy=0){
         this.health = health
         this.level = level
@@ -7,6 +7,10 @@ class enemy{
         this.image = null;
         this.pos = createVector(posx,posy)
         this.attacking=false
+        this.speed = 10;
+    }
+    setSpeed(speed){
+        this.speed = speed;
     }
     setImage(img) {
         this.image = img; //basic setter method
@@ -16,7 +20,7 @@ class enemy{
             image(this.image, this.pos.x, this.pos.y,sizex,sizey);
         }
         else{
-            this.show_default
+            this.show_default()
         }
     }
     show_default(){ //if player has no image they should use this to show basic obj
@@ -24,7 +28,7 @@ class enemy{
     }
     attack(){
         this.attacking=true
-        setTimeout(()=>this.attack=false,1500)
+        setTimeout(()=>this.attacking=false,1500)
     }
     checkmap(){ //creates a border system where if the player goes off map they return from opposite direction
         if(this.pos.y>height+5){
