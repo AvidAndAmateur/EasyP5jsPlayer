@@ -1,6 +1,14 @@
 # EasyP5js
 
 EasyP5js is a simple p5.js library aimed at getting users started quickly with making a 2d web games.
+---
+## Who this is for
+me, I've had to reuse this code a lot and figured making it into a library would be better.
+
+People who have similar problems would also benefit.
+
+If you are new to p5js I would recommend reading through the code in this library and understanding it before using it, this way you can learn
+both how this library functions and how the p5js langauge functions (and in part javascript as a whole)
 
 ---
 
