@@ -13,6 +13,7 @@ both how this library functions and how the p5js langauge functions (and in part
 At the moment EasyP5js provides movement, entities, and state flags. 
 Game mechanics like combat, collisions, and AI are intended to be implemented by the user.
 Default variations may or may not be implemented at a later date
+
 ---
 
 ## Installation
