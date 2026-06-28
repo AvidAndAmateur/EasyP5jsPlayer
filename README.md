@@ -127,9 +127,9 @@ Once a variable for the player is made you must assign the enemy object to it, y
 enemy = makeEnemy(A,B,C,X,Y)
 ```
 Where:
-A = Desired health
-B = Desired level
-C = Desired damage (when attacking player)
-X = Desired X position (leave blank for random)
-Y = Desired Y position (leave blank for random)
+- `A` = Desired health
+- `B` = Desired level
+- `C` = Desired damage (when attacking player)
+- `X` = Desired X position (leave blank for random)
+- `Y` = Desired Y position (leave blank for random)
 As of 27/06/26 (DD/MM/YY) certain variables do not have a custom set function like player does for health
